@@ -49,33 +49,3 @@ class Machine(object):
                 self.__right__(next)
 
         return [True, self.__head__[0], next, self.__chain__[:]]
-
-def main():
-    r = Machine({
-    "states": ["q0", "q1", "q2", "q3", "qa", "qr"],
-    "iAlphabet": ["0", "1"],
-    "cAlphabet": ["0", "1", " "],
-    "transitions": [{
-        "start": "q0",
-        "alph":  "0",
-        "finish": "q1",
-        "direction": "R"
-    },
-    {
-        "start": "q1",
-        "alph":  " ",
-        "finish": "qr",
-        "direction": "R"
-    }],
-    "start": "q0",
-    "acceptance": "qa",
-    "reject": "qr"
-    })
-
-    r.loadChain('0')
-    print(r.move())
-    print(r.move())
-    print(r.move())
-
-if __name__ == '__main__':
-    main()
