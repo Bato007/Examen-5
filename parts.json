@@ -1,0 +1,14 @@
+{
+  "states": ["q0", "q1", "q2", "q3", "qa", "qr"],
+  "iAlphabet": ["0", "1"],
+  "cAlphabet": ["0", "1", " "],
+  "transitions": [{
+    "start": "q0",
+    "alph":  "0",
+    "finish": "q1",
+    "direction": "L"
+  }],
+  "start": "q0",
+  "acceptance": "qa",
+  "reject": "qr"
+}
