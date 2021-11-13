@@ -1,7 +1,7 @@
 {
   "states": ["q0", "q1", "q2", "qa", "qr"],
   "iAlphabet": ["X", "Y"],
-  "cAlphabet": ["a", "b", " "],
+  "cAlphabet": ["X", "Y", "a", "b", " "],
   "transitions": [{
     "start": "q0",
     "alph":  "Y",
