@@ -6,13 +6,14 @@ def loadMachine(file='parts'):
         return json.load(outline)
 
 # accepted = 'aab'
-# 
+# rejected = 'abab'
+# loop = 'baa'
 def main():
     MAX_ITERATIONS = 30
     iteration = 0
     toTxt = []
     machine = Machine(loadMachine())
-    chain = 'aab'
+    chain = 'abab'
     start = machine.loadChain(chain)
     flag = True
     toTxt.append((str(start) + chain + '\n'))
