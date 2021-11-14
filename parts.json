@@ -1,38 +1,46 @@
 {
   "states": ["q0", "q1", "q2", "qa", "qr"],
-  "iAlphabet": ["X", "Y"],
+  "iAlphabet": ["a", "b"],
   "cAlphabet": ["X", "Y", "a", "b", " "],
   "transitions": [{
     "start": "q0",
     "alph":  "Y",
-    "finish": "q0",
-    "direction": "R"
-  },{
-    "start": "q0",
-    "alph":  "Y",
-    "finish": "q1",
-    "direction": "L"
-  },{
-    "start": "q0",
-    "alph":  "Y",
-    "finish": "q1",
-    "direction": "L",
-    "replace":  "b"
-  },{
-    "start": "q0",
-    "alph":  "X",
     "finish": "q1",
     "direction": "R",
-    "replace":  "a"
+    "replace":  "Y"
+  },{
+    "start": "q0",
+    "alph":  "b",
+    "finish": "q1",
+    "direction": "R",
+    "replace":  "Y"
+  },{
+    "start": "q0",
+    "alph":  "a",
+    "finish": "q1",
+    "direction": "R",
+    "replace":  "X"
   },{
     "start": "q1",
     "alph":  "a",
     "finish": "q1",
     "direction": "R",
-    "replace": "a"
+    "replace": "Y"
   },{
     "start": "q1",
-    "alph":  "Y",
+    "alph":  "b",
+    "finish": "q1",
+    "direction": "R",
+    "replace": "X"
+  },{
+    "start": "q1",
+    "alph":  " ",
+    "finish": "q1",
+    "direction": "L",
+    "replace": " "
+  },{
+    "start": "q1",
+    "alph":  "X",
     "finish": "q2",
     "direction": "L",
     "replace":"b"
@@ -40,44 +48,32 @@
     "start": "q2",
     "alph":  "a",
     "finish": "q2",
-    "direction": "L",
+    "direction": "R",
     "replace":"a"
   },{
     "start": "q2",
     "alph":  "Y",
     "finish": "q2",
-    "direction": "L"
+    "direction": "R",
+    "replace":  "Y"
   },{
     "start": "q2",
     "alph":  "X",
     "finish": "q0",
-    "direction": "R"
+    "direction": "R",
+    "replace":  "X"
   },{
     "start": "q1",
     "alph":  "Y",
     "finish": "qa",
-    "direction": "R"
-  },{
-    "start": "qa",
-    "alph":  "Y",
-    "finish": "qa",
-    "direction": "R"
-  },{
-    "start": "qa",
-    "alph":  " ",
-    "finish": "qa",
-    "direction": "R"
-  },{
-    "start": "qa",
-    "alph":  "Y",
-    "finish": "q2",
-    "direction": "L",
-    "replace":"b"
+    "direction": "R",
+    "replace":  "Y"
   },{
     "start": "q2",
-    "alph":  "Y",
+    "alph":  "b",
     "finish": "qr",
-    "direction": "L"
+    "direction": "L",
+    "replace":  "b"
   }],
   "start": "q0",
   "acceptance": "qa",

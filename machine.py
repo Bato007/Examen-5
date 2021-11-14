@@ -41,7 +41,8 @@ class Machine(object):
         for transition in self.__transitions__:
             if (transition['start'] == self.__head__[1]) and (transition['alph'] == self.__chain__[self.__head__[0]]):
                 next = transition
-
+        print(self.__chain__)
+        print(next)
         if (next):
             if (next['finish'] == self.__acceptance__) or (next['finish'] == self.__reject__): 
                 self.__finished__ = True

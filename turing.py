@@ -5,13 +5,14 @@ def loadMachine(file='parts'):
     with open(file + '.json', 'r') as outline:
         return json.load(outline)
 
+# accepted = 'aab'
+# 
 def main():
-    MAX_ITERATIONS = 20000
+    MAX_ITERATIONS = 30
     iteration = 0
     toTxt = []
     machine = Machine(loadMachine())
-    # chain = input('Ingrese la cadena a evaluar: ')
-    chain = 'aa'
+    chain = 'aab'
     start = machine.loadChain(chain)
     flag = True
     toTxt.append((str(start) + chain + '\n'))
