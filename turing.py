@@ -13,7 +13,7 @@ def main():
     iteration = 0
     toTxt = []
     machine = Machine(loadMachine())
-    chain = 'abab'
+    chain = 'baa'
     start = machine.loadChain(chain)
     flag = True
     toTxt.append((str(start) + chain + '\n'))
@@ -30,7 +30,7 @@ def main():
 
     if (iteration == MAX_ITERATIONS): toTxt.append('LOOP')
 
-    with open('result.txt', 'w') as file:
+    with open('loop.txt', 'w') as file:
         file.writelines(toTxt)
 
 if __name__ == '__main__':

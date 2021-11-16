@@ -16,15 +16,14 @@ class Machine(object):
         return machine
 
     def __left__(self, next):
+        self.__chain__[self.__head__[0]] = next['replace']
         if self.__head__[0] == 0: return    # No se puede ir antes
-        # Se cambia la variable
-        if next['replace']: self.__chain__[self.__head__[0]] = next['replace']
         self.__head__ = [self.__head__[0] - 1, next['finish']]
 
     def __right__(self, next):
         if self.__head__[0] == len(self.__chain__) - 1:
             self.__chain__.append(' ')
-        if next['replace']: self.__chain__[self.__head__[0]] = next['replace']
+        self.__chain__[self.__head__[0]] = next['replace']
         self.__head__ = [self.__head__[0] + 1, next['finish']]
 
     def loadChain(self, chain):
